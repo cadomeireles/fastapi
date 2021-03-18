@@ -14,3 +14,11 @@ async def create_order(order: OrderPOST, db: Session = Depends(get_db)):
     order = order_service.create_order(db, order)
 
     return order
+
+
+@router.get("/order/detail/{id}")
+async def get_order(id: str, db: Session = Depends(get_db)):
+    service = OrderService()
+    order = service.get_order_by_id(db, id)
+
+    return order
