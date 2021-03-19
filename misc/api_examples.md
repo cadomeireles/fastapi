@@ -25,5 +25,5 @@ curl --request POST \
 
 ```
 curl --request GET \
-  --url http://127.0.0.1:8000/order/detail/<uuid>/
+  --url http://127.0.0.1:8000/order/detail/<uuid>
 ```
